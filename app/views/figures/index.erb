@@ -1,0 +1,11 @@
+<u><h1 style="color:green;">[INDEX] Figures Page</h1></u>
+
+<h3>List of Figures</h3>
+<ul>
+    <% @figures.each do |figure| %>
+        <li><a href="/figures/<%= figure.id %>"><%= figure.name %></a></li>
+    <% end %>
+</ul>
+
+<button><a class="button" href="/figures/new">New Figure</a></button>
+<button><a class="button" href="/">Home</a></button>

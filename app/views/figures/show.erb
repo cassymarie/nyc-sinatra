@@ -1,0 +1,20 @@
+<u><h1 style="color:blue;">[SHOW] Figure Page</h1></u><br>
+
+<h2><%= @figure.name %></h3><br>
+
+<h3>Landmarks:</h3>
+<ul>
+<% @figure.landmarks.each do |landmark| %>
+    <li><%=landmark.name%></li>
+<%end%>
+</ul>
+
+<h3>Titles:</h3>
+<ul>
+<% @figure.titles.each do |title| %>
+    <li><%=title.name%></li>
+<%end%>
+</ul>
+
+<button><a class="button" href="/figures/<%= @figure.id %>/edit">Edit Figure</a></button>
+<button><a class="button" href="/figures">[BACK]</a></button>
